@@ -6,7 +6,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform/helper/schema"
-	"github.ibm.com/OpenContent/terraform-provider-camc/common"
+	"github.com/IBM-CAMHub-Open/terraform-provider-camc/common"
 )
 
 func resourceCamcVaultitem() *schema.Resource {

@@ -29,7 +29,7 @@ Follow the steps below to get the information on how to use the provider
   
   #Create directories  
   mkdir -p $GOPATH/src/github.com/hashicorp  
-  mkdir -p $GOPATH/src/github.ibm.com/OpenContent  
+  mkdir -p $GOPATH/src/github.com/IBM-CAMHub-Open
   mkdir -p $GOPATH/bin  
   cd $GOPATH/src/github.com/hashicorp  
   
@@ -40,7 +40,7 @@ Follow the steps below to get the information on how to use the provider
   cd terraform/  
   git checkout v${CAM_TERRAFORM_VERSION}  
   
-  cd $GOPATH/src/github.ibm.com/OpenContent
+  cd $GOPATH/src/github.com/IBM-CAMHub-Open
   
   #Clone terrafrom provider camc  
   git clone https://github.com/IBM-CAMHub-Open/terraform-provider-camc.git  
@@ -54,8 +54,13 @@ Follow the steps below to get the information on how to use the provider
   go get -u golang.org/x/crypto/ssh  
   
   #Build  
-  cd $GOPATH/src/github.ibm.com/OpenContent/terraform-provider-camc  
+  cd $GOPATH/src/github.com/IBM-CAMHub-Open/terraform-provider-camc  
   go build -o terraform-provider-camc  
-  mv $GOPATH/src/github.ibm.com/OpenContent/terraform-provider-camc/terraform-provider-camc $GOPATH/bin/terraform-provider-camc_v${PROVIDER_VERSION}
+  mv $GOPATH/src/github.com/IBM-CAMHub-Open/terraform-provider-camc/terraform-provider-camc $GOPATH/bin/terraform-provider-camc_v${PROVIDER_VERSION}
+
+
+Copyright IBM Corp. 2019
+
+
 
 

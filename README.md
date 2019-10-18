@@ -11,23 +11,27 @@ GO
 
 ## Using the provider
 
-See the documentation in [IBM Cloud Automation Manager Documentation](https://www.ibm.com/support/knowledgecenter/en/SS2L37/product_welcome_cloud_automation_manager.html)
-under Reference > Terraform CAMC provider
+Follow the steps below to get the information on how to use the provider
+
+* Open [IBM Cloud Automation Manager Documentation.](https://www.ibm.com/support/knowledgecenter/en/SS2L37/product_welcome_cloud_automation_manager.html)
+* Select the version of CAM you are using 
+* Navigate to  Reference > Terraform CAMC provider
 
 ## Building the provider
 
   #Set the variables for terrafrom version,   
   #terraform-provider-camc branch and to turn off GO Modules.  
   export GOPATH=<your_go_path>  
-  export CAM_TERRAFORM_VERSION=0.11.7  
-  export BRANCH_TO_BUILD=master
+  export CAM_TERRAFORM_VERSION=0.11.7    
+  export BRANCH_TO_BUILD=master  
   export GO111MODULE=off  
+  export PROVIDER_VERSION=<your_new_provider_version>
   
   #Create directories  
   mkdir -p $GOPATH/src/github.com/hashicorp  
-  mkdir -p $GOPATH/src/github.com/IBM-CAMHub-Open  
-  mkdir -p $GOPATH/bin 
-  cd $GOPATH/src/github.com/hashicorp
+  mkdir -p $GOPATH/src/github.ibm.com/OpenContent  
+  mkdir -p $GOPATH/bin  
+  cd $GOPATH/src/github.com/hashicorp  
   
   #Clone terrafrom  
   git clone https://github.com/hashicorp/terraform.git
@@ -36,7 +40,7 @@ under Reference > Terraform CAMC provider
   cd terraform/  
   git checkout v${CAM_TERRAFORM_VERSION}  
   
-  cd $GOPATH/src/github.com/IBM-CAMHub-Open
+  cd $GOPATH/src/github.ibm.com/OpenContent
   
   #Clone terrafrom provider camc  
   git clone https://github.com/IBM-CAMHub-Open/terraform-provider-camc.git  
@@ -50,7 +54,8 @@ under Reference > Terraform CAMC provider
   go get -u golang.org/x/crypto/ssh  
   
   #Build  
-  cd $GOPATH/src/github.com/IBM-CAMHub-Open/terraform-provider-camc;go build -o terraform-provider-camc  
-  mv $GOPATH/src/github.com/IBM-CAMHub-Open/terraform-provider-camc/terraform-provider-camc $GOPATH/bin  
+  cd $GOPATH/src/github.ibm.com/OpenContent/terraform-provider-camc  
+  go build -o terraform-provider-camc  
+  mv $GOPATH/src/github.ibm.com/OpenContent/terraform-provider-camc/terraform-provider-camc $GOPATH/bin/terraform-provider-camc_v${PROVIDER_VERSION}
 
 

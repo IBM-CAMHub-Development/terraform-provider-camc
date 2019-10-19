@@ -29,7 +29,7 @@ Follow the steps below to get the information on how to use the provider
   
   #Create directories  
   mkdir -p $GOPATH/src/github.com/hashicorp  
-  mkdir -p $GOPATH/src/github.com/IBM-CAMHub-Open
+  mkdir -p $GOPATH/src/github.com/IBM-CAMHub-Open  
   mkdir -p $GOPATH/bin  
   cd $GOPATH/src/github.com/hashicorp  
   

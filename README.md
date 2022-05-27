@@ -7,7 +7,7 @@ This provider is maintained by IBM Corp.
 ## Requirements
 
 Terraform 0.11.7 or 0.12.21
-GO (GO version for Terrafrom version 0.12.21 must be 1.13.x)
+GO (GO version for Terrafrom version 0.12.21 must be greater than 1.13.x)
 
 ## Using the provider
 
